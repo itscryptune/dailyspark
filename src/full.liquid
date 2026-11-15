@@ -17,9 +17,8 @@
    <div class="ds-right-header"><strong class="ds-heading">QUOTE OF THE DAY</strong><span>✦</span></div>
    <div class="ds-quote-area">
     <div class="ds-quote-mark">“</div>
-    <div class="ds-quote">A little progress today adds up.</div>
-    <div class="ds-author">— Daily Spark</div>
-   </div>
+        <div class="ds-quote">{{ quote_text | default: "A small step forward still counts." | escape }}</div>
+    <div class="ds-author">— {{ quote_author | default: "Daily Spark" | escape }}</div>   </div>
    <div class="ds-right-footer"><span>ONE DAY. ONE THOUGHT.</span><span class="ds-credit">DAILY SPARK</span></div>
   </section>
  </div>
