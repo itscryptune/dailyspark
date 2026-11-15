@@ -14,16 +14,26 @@
    <div class="ds-left-footer">MAKE TODAY COUNT.</div>
   </section>
   <section class="ds-right">
-   <div class="ds-right-header"><strong class="ds-heading">QUOTE OF THE DAY</strong><span>✦</span></div>
+    <div class="ds-right-header">
+      <strong class="ds-heading">{% if quote_source == "custom" %}FROM MY COLLECTION{% else %}QUOTE OF THE DAY{% endif %}</strong>
+      <span>✦</span>
+    </div>
    <div class="ds-quote-area">
     <div class="ds-quote-mark">“</div>
         <div class="ds-quote">{{ quote_text | default: "A small step forward still counts." | escape }}</div>
     <div class="ds-author">— {{ quote_author | default: "Daily Spark" | escape }}</div>   </div>
-   <div class="ds-right-footer"><span>ONE DAY. ONE THOUGHT.</span><span class="ds-credit">DAILY SPARK</span></div>
+  <div class="ds-right-footer">
+    <span>ONE DAY. ONE THOUGHT.</span>
+    <span class="ds-credit">
+      {% if quote_source == "zenquotes" %}zenquotes.io
+      {% elsif quote_source == "custom" %}PERSONAL QUOTE
+      {% else %}DAILY SPARK{% endif %}
+    </span>
+  </div>
   </section>
  </div>
 </div>
 <div class="title_bar">
   <span class="title">Daily Spark</span>
   <span class="instance">itscryptune</span>
-</div>
+</div>    
