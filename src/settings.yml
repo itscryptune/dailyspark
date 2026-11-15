@@ -4,14 +4,20 @@
 # Docs: https://help.trmnl.com/en/articles/10542599-importing-and-exporting-private-plugins#h_581fb988f0
 #
 ---
+name: Daily Spark
+description: Clock and daily quotes for TRMNL
 strategy: polling
+polling_url: https://zenquotes.io/api/today
+polling_verb: GET
+polling_headers: ''
+refresh_interval: 15
+framework_version: latest
 no_screen_padding: 'no'
 dark_mode: 'no'
-static_data: ''
-polling_verb: get
-framework_version: latest
-polling_url: ''
-polling_headers: ''
-name: My Plugin
-description: ''
-refresh_interval: 1440
+custom_fields:
+  - keyname: about
+    name: About Daily Spark
+    field_type: author_bio
+    category: life,productivity
+    description: Daily clock and quote dashboard with original and ZenQuotes content.
+    github_url: https://github.com/itscryptune/dailyspark
