@@ -1,1 +1,23 @@
-
+<style>
+.ds-root,.ds-root * { box-sizing:border-box; }
+.ds-root { height:100%; width:100%; display:flex; overflow:hidden; background:#fff; color:#111; font-family:Arial,Helvetica,sans-serif; }
+.ds-left { width:38%; flex-shrink:0; background:#111; color:#fff; display:flex; flex-direction:column; justify-content:space-between; padding:21px 22px; overflow:hidden; }
+.ds-brand { font-size:18px; font-weight:900; letter-spacing:2px; white-space:nowrap; }
+.ds-date-area { display:flex; flex-direction:column; }
+.ds-weekday { font-size:17px; font-weight:900; letter-spacing:3px; margin-bottom:9px; }
+.ds-date-line { display:flex; align-items:center; gap:12px; }
+.ds-day-number { font-size:88px; font-weight:900; line-height:1; letter-spacing:-4px; }
+.ds-month-year { display:flex; flex-direction:column; gap:6px; font-size:16px; font-weight:900; }
+.ds-clock { border-top:2px solid #888; padding-top:16px; margin-top:16px; font-size:46px; font-weight:900; letter-spacing:-2px; }
+.ds-period { margin-top:5px; font-size:12px; font-weight:800; letter-spacing:2px; }
+.ds-left-footer { font-size:11px; font-weight:800; letter-spacing:1.5px; }
+.ds-right { min-width:0; flex:1; display:flex; flex-direction:column; padding:22px 25px; }
+.ds-right-header { display:flex; justify-content:space-between; align-items:center; gap:12px; border-bottom:2px solid #111; padding-bottom:14px; }
+.ds-heading { font-size:13px; font-weight:900; letter-spacing:2px; }
+.ds-quote-area { min-height:0; flex:1; display:flex; flex-direction:column; justify-content:center; overflow:hidden; padding:10px 0; }
+.ds-quote-mark { font-family:Georgia,serif; font-size:65px; font-weight:900; line-height:.8; margin-bottom:15px; }
+.ds-quote { font-family:Georgia,serif; font-weight:700; font-size:30px; line-height:1.2; overflow-wrap:break-word; margin-bottom:17px; }
+.ds-author { font-size:15px; font-weight:800; overflow-wrap:break-word; }
+.ds-right-footer { display:flex; justify-content:space-between; gap:10px; border-top:2px solid #111; padding-top:10px; font-size:10px; font-weight:800; letter-spacing:1px; }
+.ds-credit { font-weight:600; letter-spacing:0; white-space:nowrap; }
+</style>
