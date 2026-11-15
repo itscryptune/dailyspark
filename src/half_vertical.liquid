@@ -1,7 +1,17 @@
-<div class="layout layout--col layout--center">
-  <span class="title title--large">Half vertical</span>
+<div class="layout">
+ <div class="ds-compact ds-vertical">
+  <div class="ds-compact-header"><strong>✦ DAILY SPARK</strong></div>
+  <div class="ds-vertical-main">
+   <strong class="ds-vertical-time">{{ display_time }}</strong>
+   <div class="ds-vertical-date">{{ display_period }} · {{ display_day }}, {{ display_date }} {{ display_month }}</div>
+   <div class="ds-vertical-line"></div>
+   <div class="ds-vertical-quote {{ quote_class }}">“{{ display_quote | escape }}”</div>
+   <div class="ds-author">— {{ display_author | escape }}</div>
+  </div>
+  <div class="ds-compact-footer"><span class="ds-compact-credit">DAILY SPARK</span></div>
+ </div>
 </div>
-
 <div class="title_bar">
-  <span class="title">My Plugin</span>
-</div>
+  <span class="title">Daily Spark</span>
+  <span class="instance">itscryptune</span>
+</div>    
