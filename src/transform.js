@@ -1,3 +1,6 @@
+const QUOTE_MODE = "mixed"; // available modes: "zen", "custom", "mixed"
+const CUSTOM_QUOTE_PERCENT = 70;
+
 const DEFAULT_AUTHOR = "itscryptune";
 const CUSTOM_QUOTES = [
  { text: "The hardest part of a project is write the readme.md", author: "itscryptune" },
@@ -38,4 +41,4 @@ function run(input) {
   quote_text: "A small step forward still counts.",
   quote_author: "Daily Spark", quote_source: "fallback"
  };
-}
+} 
