@@ -5,7 +5,7 @@
    <strong class="ds-vertical-time">{{ display_time }}</strong>
    <div class="ds-vertical-date">{{ display_period }} · {{ display_day }}, {{ display_date }} {{ display_month }}</div>
    <div class="ds-vertical-line"></div>
-   <div class="ds-vertical-quote {{ quote_class }}">“{{ display_quote | escape }}”</div>
+   <div class="ds-vertical-quote {{ quote_class }}">“{{ quote_vertical | default: display_quote | escape }}”</div>
    <div class="ds-author">— {{ display_author | escape }}</div>
   </div>
   <div class="ds-compact-footer">
@@ -16,7 +16,3 @@
     </span>
  </div>
 </div>
-<div class="title_bar">
-  <span class="title">Daily Spark</span>
-  <span class="instance">itscryptune</span>
-</div>    

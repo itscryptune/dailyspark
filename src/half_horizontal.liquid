@@ -9,7 +9,7 @@
     <strong class="ds-compact-clock">{{ display_time }} {{ display_period }}</strong>
    </div>
    <div class="ds-compact-quote">
-    <div class="ds-compact-text {{ quote_class }}">“{{ display_quote | escape }}”</div>
+    <div class="ds-compact-text {{ quote_class }}">“{{ quote_horizontal | default: display_quote | escape }}”</div>
     <div class="ds-compact-author">— {{ display_author | escape }}</div>
    </div>
   </div>
@@ -20,8 +20,4 @@
       {% else %}DAILY SPARK{% endif %}
     </span>
  </div>
-</div>
-<div class="title_bar">
-  <span class="title">Daily Spark</span>
-  <span class="instance">itscryptune</span>
 </div>
