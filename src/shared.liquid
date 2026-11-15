@@ -5,6 +5,13 @@
 {% assign display_year = local_time | date: "%Y" %}
 {% assign display_time = local_time | date: "%I:%M" %}
 {% assign display_period = local_time | date: "%p" %}
+{% assign display_quote = quote_text | default: "A small step forward still counts." %}
+{% assign display_author = quote_author | default: "Daily Spark" %}
+{% assign quote_length = display_quote | size %}
+{% assign quote_class = "ds-normal" %}
+{% if quote_length > 190 %}{% assign quote_class = "ds-tiny" %}
+{% elsif quote_length > 130 %}{% assign quote_class = "ds-small" %}
+{% elsif quote_length > 75 %}{% assign quote_class = "ds-medium" %}{% endif %}
 
 <style>
 .ds-root,.ds-root * { box-sizing:border-box; }
@@ -28,4 +35,7 @@
 .ds-author { font-size:15px; font-weight:800; overflow-wrap:break-word; }
 .ds-right-footer { display:flex; justify-content:space-between; gap:10px; border-top:2px solid #111; padding-top:10px; font-size:10px; font-weight:800; letter-spacing:1px; }
 .ds-credit { font-weight:600; letter-spacing:0; white-space:nowrap; }
+.ds-quote.ds-medium { font-size:25px; }
+.ds-quote.ds-small { font-size:21px; }
+.ds-quote.ds-tiny { font-size:17px; }
 </style>

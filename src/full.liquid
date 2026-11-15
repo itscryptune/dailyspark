@@ -20,8 +20,8 @@
     </div>
    <div class="ds-quote-area">
     <div class="ds-quote-mark">“</div>
-        <div class="ds-quote">{{ quote_text | default: "A small step forward still counts." | escape }}</div>
-    <div class="ds-author">— {{ quote_author | default: "Daily Spark" | escape }}</div>   </div>
+      <div class="ds-quote {{ quote_class }}">{{ display_quote | escape }}</div>
+      <div class="ds-author">— {{ display_author | escape }}</div>   </div>
   <div class="ds-right-footer">
     <span>ONE DAY. ONE THOUGHT.</span>
     <span class="ds-credit">
