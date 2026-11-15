@@ -1,7 +1,22 @@
-<div class="layout layout--col layout--center">
-  <span class="title title--large">Half horizontal</span>
+<div class="layout">
+ <div class="ds-compact ds-horizontal">
+  <div class="ds-compact-header"><strong>✦ DAILY SPARK</strong><span>QUOTE OF THE DAY</span></div>
+  <div class="ds-compact-body">
+   <div class="ds-compact-date">
+    <span class="ds-compact-day">{{ display_day | upcase }}</span>
+    <strong class="ds-compact-number">{{ display_date }}</strong>
+    <span class="ds-compact-day">{{ display_month | upcase }}</span>
+    <strong class="ds-compact-clock">{{ display_time }} {{ display_period }}</strong>
+   </div>
+   <div class="ds-compact-quote">
+    <div class="ds-compact-text {{ quote_class }}">“{{ display_quote | escape }}”</div>
+    <div class="ds-compact-author">— {{ display_author | escape }}</div>
+   </div>
+  </div>
+  <div class="ds-compact-footer"><span>ONE DAY. ONE THOUGHT.</span><span class="ds-compact-credit">DAILY SPARK</span></div>
+ </div>
 </div>
-
 <div class="title_bar">
-  <span class="title">My Plugin</span>
-</div>
+  <span class="title">Daily Spark</span>
+  <span class="instance">itscryptune</span>
+</div>    
