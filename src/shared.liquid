@@ -1,3 +1,11 @@
+{% assign local_time = "now" | date: "%s" | plus: trmnl.user.utc_offset %}
+{% assign display_day = local_time | date: "%A" %}
+{% assign display_date = local_time | date: "%d" %}
+{% assign display_month = local_time | date: "%B" %}
+{% assign display_year = local_time | date: "%Y" %}
+{% assign display_time = local_time | date: "%I:%M" %}
+{% assign display_period = local_time | date: "%p" %}
+
 <style>
 .ds-root,.ds-root * { box-sizing:border-box; }
 .ds-root { height:100%; width:100%; display:flex; overflow:hidden; background:#fff; color:#111; font-family:Arial,Helvetica,sans-serif; }

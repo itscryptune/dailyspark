@@ -3,13 +3,13 @@
   <section class="ds-left">
    <div class="ds-brand">✦ DAILY SPARK</div>
    <div class="ds-date-area">
-    <div class="ds-weekday">SUNDAY</div>
+    <div class="ds-weekday">{{ display_day | upcase }}</div>
     <div class="ds-date-line">
-     <strong class="ds-day-number">15</strong>
-     <div class="ds-month-year"><span>NOVEMBER</span><span>2026</span></div>
+     <strong class="ds-day-number">{{ display_date }}</strong>
+     <div class="ds-month-year"><span>{{ display_month | upcase }}</span><span>{{ display_year }}</span></div>
     </div>
-    <div class="ds-clock">11:04</div>
-    <div class="ds-period">PM · LOCAL TIME</div>
+    <div class="ds-clock">{{ display_time }}</div>
+    <div class="ds-period">{{ display_period }} · LOCAL TIME</div>
    </div>
    <div class="ds-left-footer">MAKE TODAY COUNT.</div>
   </section>
