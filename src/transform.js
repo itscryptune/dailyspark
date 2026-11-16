@@ -1,4 +1,4 @@
-const QUOTE_MODE = "mixed";
+const QUOTE_MODE = "mixed"; // available modes: "zen", "custom", "mixed"
 const CUSTOM_QUOTE_PERCENT = 70;
 const DEFAULT_AUTHOR = "itscryptune";
 const CUSTOM_QUOTES = [

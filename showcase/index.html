@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="theme-color" content="#f3f3f3">
+ <meta name="description" content="A daily quote and clock for TRMNL e-ink displays.">
+ <title>Daily Spark</title>
+ <link rel="stylesheet" href="./style.css">
+ <script src="./app.js" defer></script>
+</head>
+<body>
+ <main class="page">
+  <header class="masthead">
+   <div class="project">
+    <div class="project-logo" aria-hidden="true">✦</div>
+    <div><h1>Daily Spark</h1><p>One day. One thought.</p></div>
+   </div>
+   <button type="button" id="refresh" class="refresh">Refresh display</button>
+  </header>
+  <nav class="layouts" aria-label="TRMNL layout">
+   <button type="button" class="active" data-layout="full" aria-pressed="true">Full</button>
+   <button type="button" data-layout="horizontal" aria-pressed="false">Half horizontal</button>
+   <button type="button" data-layout="vertical" aria-pressed="false">Half vertical</button>
+   <button type="button" data-layout="quadrant" aria-pressed="false">Quadrant</button>
+  </nav>
+  <div class="preview-status">
+   <span id="status" role="status" aria-live="polite">Showing an example quote.</span>
+   <button type="button" id="edit-toggle" class="edit-toggle" aria-expanded="false">Change quote</button>
+  </div>
+  <form id="quote-form" class="quote-form" hidden>
+   <label for="custom-text">Quote</label>
+   <textarea id="custom-text" maxlength="450" rows="3" required></textarea>
+   <label for="custom-author">Author</label>
+   <input id="custom-author" maxlength="100" required>
+   <div class="form-actions"><button type="submit">Show in preview</button><button type="button" id="cancel-edit">Cancel</button></div>
+   <small>Changes the browser preview only.</small>
+  </form>
+  <section class="preview-area" aria-label="Daily Spark e-ink preview">
+   <div class="display-frame" id="display-frame">
+    <div id="screen" class="ds-screen full"></div>
+   </div>
+  </section>
+  <footer class="page-footer">
+   <span>Created by <a href="https://github.com/itscryptune" target="_blank" rel="noopener noreferrer">itscryptune</a></span>
+   <span>Quotes from ZenQuotes and a personal collection</span>
+  </footer>
+ </main>
+</body>
+</html>
